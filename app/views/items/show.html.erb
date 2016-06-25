@@ -17,10 +17,11 @@
 
 </p>
 <p>
-  <img src="<%= @item.image_url %>">
+  <%= image_tag @item.image_url %>"
 </p>
 
-  <a href="/items/<%= @item.id %>/edit">編集</a>
-  <a href="/items/<%= @item.id %>/" data-method="delete">削除</a>
+  <!-- <a href="<%= edit_item_path(@item) %>">編集</a> --><!-- HTMLとRubyが混合している -->
+  <%= link_to "編集", edit_item_path(@item) %>  <!-- Rubyで統一 -->
+  <%= link_to "削除", item_path(@item), method: :delete %>
 
 <!-- <img src="<http:////>">みたいなのが普通 -->
