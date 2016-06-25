@@ -1,9 +1,21 @@
 Rails.application.routes.draw do
+
+  resources :items
+
+
+  # get '/items' => 'items#index'
+  # post '/items' => 'items#create'
+  # get '/items/:id' => 'items#show'
+  # get '/items/:id/edit' => 'items#edit'
+  # patch '/items/:id' => 'items#update'
+  # get '/items/new' => 'items#new'
+  # delete '/items/:id' => 'items#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # root 'welcome#index' URLの表示を変えられる
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
